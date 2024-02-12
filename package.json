@@ -30,8 +30,7 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp",
-    "pug": "gulp pugs"
+    "start": "gulp"
   },
   "browserslist": [
     "last 2 versions",
@@ -43,7 +42,7 @@
   "editorconfig-cli": [
     "*.json",
     "*.js",
-    "source/*.pug",
+    "source/*.html",
     "source/js/**/*.js",
     "source/img/**/*.svg",
     "source/sass/**/*.sсss"

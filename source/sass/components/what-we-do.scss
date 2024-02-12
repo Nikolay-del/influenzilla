@@ -1,0 +1,52 @@
+.what-we-do__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  counter-reset: what-we-do;
+}
+
+.what-we-do__item {
+  min-height: 18.1rem;
+  padding: 6.5rem 0 1rem 3.4rem;
+  counter-increment: what-we-do;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  transition: background-size $trans-default;
+
+  &::before {
+    content: "0" counter(what-we-do);
+    display: block;
+    margin: 0 0 2.4rem;
+    font-family: $ff-unbounded;
+    font-weight: 300;
+    font-size: 2.5rem;
+  }
+
+  &:nth-child(1) {
+    background-image: url("../img/what-we-do-1.jpg");
+  }
+
+  &:nth-child(2) {
+    background-image: url("../img/what-we-do-2.jpg");
+  }
+
+  &:nth-child(3) {
+    background-image: url("../img/what-we-do-3.jpg");
+  }
+
+  &:nth-child(4) {
+    background-image: url("../img/what-we-do-4.jpg");
+  }
+
+  @include hover {
+    background-size: 120% 120%;
+  }
+}
+
+.what-we-do__text {
+  margin: 0;
+  width: 17.2rem;
+}

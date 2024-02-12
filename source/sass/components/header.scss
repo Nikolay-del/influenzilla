@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url("../img/header-background.jpg") no-repeat;
+  background-size: cover;
+  padding: 3rem 0 0;
+}
+
+.header__container {
+  outline: 2px solid $color-basic-white;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+}
+
+.header__about {
+  display: flex;
+  align-items: center;
+  gap: 3.6rem;
+  padding: 0 3.4rem 0 2rem;
+  box-shadow: -2px 0 0 0 $color-basic-white inset;
+}
+
+.header__logo {
+  flex: 0 0 auto;
+}

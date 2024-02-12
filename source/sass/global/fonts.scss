@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Inter Tight";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local("Inter Tight Regular"), local("Inter-Tight-Regular"), url("../../fonts/InterTight-Regular.woff") format("woff"), url("../../fonts/InterTight-Regular.woff2") format("woff2");
+}
+
+
+@font-face {
+  font-family: "Inter Tight";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: local("Inter Tight Medium"), local("Inter-Tight-Medium"), url("../../fonts/InterTight-Medium.woff") format("woff"), url("../../fonts/InterTight-Medium.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Unbounded";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: local("Unbounded Light"), local("Unbounded-Light"), url("../../fonts/Unbounded-Light.woff") format("woff"), url("../../fonts/Unbounded-Light.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Unbounded";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: local("Unbounded Regular"), local("Unbounded-Regular"), url("../../fonts/Unbounded-Regular.woff") format("woff"), url("../../fonts/Unbounded-Regular.woff2") format("woff2");
+}

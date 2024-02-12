@@ -1,0 +1,66 @@
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: grid;
+  min-height: 100%;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+  font-family: "Inter Tight", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 0.88rem;
+  line-height: 1.2;
+  color: $color-text;
+  background: $color-background;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+//
+//.overlay {
+//  display: none;
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  width: 100vw;
+//  height: 100vh;
+//  background-color: #000;
+//  opacity: 0.3;
+//  z-index: 99;
+//  transition: background-color $trans-default;
+//}
+
+.container {
+  max-width: 78rem + 2.5rem * 2;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+}
