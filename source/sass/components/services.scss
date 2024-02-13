@@ -1,0 +1,103 @@
+.services__container {
+  display: grid;
+  grid-template-columns: 27% 39% 15% 19%;
+  margin: 0 0 300px;
+
+  &::before {
+    content: "London 2006";
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    font-size: 0.75rem;
+
+    @include add-gradient-text;
+  }
+}
+
+.services__heading {
+  margin: 0 0 5.2rem;
+
+  @include heading;
+}
+
+.services__text {
+  margin: 0;
+
+  &--design-philosophy {
+    margin: 2rem 0 0;
+    width: 90%;
+    grid-column: 2 / 3;
+  }
+}
+
+.services__text-wrap {
+  display: grid;
+  align-content: start;
+  row-gap: 1rem;
+
+  &--company-description {
+    width: 78%;
+    grid-column: 2 / 3;
+  }
+
+  &--about-services {
+    grid-column: 3 / -1;
+  }
+}
+
+.services__list {
+  grid-column: 2 / -1;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  box-shadow: 0 0 0 2px $color-basic-white inset;
+}
+
+.services__item {
+  box-shadow: 0 0 0 1px $color-basic-white inset;
+}
+
+.services__item-top {
+  display: flex;
+  padding: 2.7rem 0 3.25rem 3.25rem;
+  box-shadow: 0 -2px 0 0 $color-basic-white inset;
+
+  picture {
+    &:not(:nth-child(1)) {
+      margin-left: -1rem;
+    }
+
+    &:nth-child(2) {
+      transform: rotate(40deg);
+    }
+
+    &:nth-child(3) {
+      transform: rotate(120deg);
+    }
+  }
+}
+
+.services__item-name {
+  margin: 0 0 1.25rem;
+  font-size: 1.9rem;
+  font-family: $ff-unbounded;
+  font-weight: 300;
+
+  @include add-gradient-text;
+}
+
+.services__item-description {
+  margin: 0;
+  width: 73%;
+}
+
+.services__item-bottom {
+  padding: 2.1rem 0 3rem 3rem;
+}
+
+.services__figure {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  align-self: end;
+}

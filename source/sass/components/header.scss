@@ -2,9 +2,14 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: url("../img/header-background.jpg") no-repeat;
-  background-size: cover;
   padding: 3rem 0 0;
+  background: url("../img/header-background.jpg") no-repeat center center;
+  background-size: 100% 100%;
+  animation: zoom 40s infinite;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/header-background@2x.jpg");
+  }
 }
 
 .header__container {
@@ -23,4 +28,18 @@
 
 .header__logo {
   flex: 0 0 auto;
+}
+
+@keyframes zoom {
+  0% {
+    background-size: 100% 100%;
+  }
+
+  50% {
+    background-size: 120% 120%;
+  }
+
+  100% {
+    background-size: 100% 100%;
+  }
 }

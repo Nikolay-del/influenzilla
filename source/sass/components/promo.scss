@@ -21,12 +21,8 @@
 
 .promo__heading {
   margin: 0;
-  grid-column: 1 / 3;
-  font-family: $ff-unbounded;
-  font-size: 3.34rem;
-  font-weight: 300;
 
-  @include add-gradient-text;
+  @include heading;
 }
 
 .promo__heading-postscript {
@@ -48,5 +44,12 @@
   svg {
     margin: 0 0 1.25rem;
     display: block;
+    animation: rotate 5s linear infinite;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
   }
 }

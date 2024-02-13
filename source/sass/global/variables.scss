@@ -2,8 +2,8 @@ $color-background:                  #111111;
 $color-text:                        #e4e4e4;
 $color-basic-white:                 #ffffff;
 $gradient-default:                  linear-gradient(91.2deg, #c6f1f7 -4%, #f983e9 36%, #b877ff 77%, #c2e9cd 106%);
-
+// Transitions
 $tf-default:                        ease;
 $trans-default:                     0.3s $tf-default;
-
-$ff-unbounded: "Unbounded", "Arial", sans-serif
+// Fonts
+$ff-unbounded:                      "Unbounded", "Arial", sans-serif;

@@ -12,3 +12,12 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+@mixin heading {
+  grid-column: 1 / 3;
+  font-family: $ff-unbounded;
+  font-size: 3.34rem;
+  font-weight: 300;
+
+  @include add-gradient-text;
+}

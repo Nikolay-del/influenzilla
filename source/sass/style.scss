@@ -1,10 +1,12 @@
+// Global
 @import "global/variables";
 @import "global/mixins";
 @import "global/fonts";
 @import "global/global";
-
+// Components
 @import "components/header";
 @import "components/main-nav";
 @import "components/promo";
 @import "components/case-nav";
 @import "components/what-we-do";
+@import "components/services";
