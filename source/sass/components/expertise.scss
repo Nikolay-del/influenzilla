@@ -1,0 +1,65 @@
+.expertise__container {
+  display: grid;
+  grid-template-columns: 27% 39% 15% 19%;
+}
+
+.expertise__middle {
+  padding: 5.3rem 0 4rem;
+  background: url("../img/expertise-background.jpg");
+  background-size: cover;
+}
+
+.expertise__bottom {
+  padding: 6rem 0 8rem;
+}
+
+.expertise__heading {
+  margin: 0;
+  width: 90%;
+
+  @include heading;
+}
+
+.expertise__text {
+  margin: 0;
+
+  &--values {
+    grid-column: -3 / -1;
+    align-self: end;
+    width: 83%;
+
+    @include add-gradient-text;
+  }
+}
+
+.expertise__text-wrap {
+  display: grid;
+  row-gap: 1rem;
+
+  &--comprehensive-solutions {
+    width: 90%;
+  }
+
+  &--startup-focus {
+    grid-column: -3 / -1;
+  }
+}
+
+.expertise__decor-wrap {
+  svg:not(:nth-child(1)) {
+    margin: 0 0 0 -0.4rem;
+  }
+}
+
+.expertise__hi {
+  margin: 0 0 20rem;
+  font-size: 0.75rem;
+
+  &:nth-child(1) {
+    @include add-gradient-text;
+  }
+
+  &:nth-child(2) {
+    grid-column: 3 / 4;
+  }
+}

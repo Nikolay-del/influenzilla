@@ -1,0 +1,66 @@
+.client-focused {
+  margin: 6.5rem 0 10rem;
+}
+
+.client-focused__container {
+  display: grid;
+  grid-template-columns: 27% 39% 15% 19%;
+
+  &::before {
+    content: "London 2006";
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    align-self: end;
+
+    @include add-gradient-text;
+  }
+}
+
+.client-focused__heading {
+  margin: 2.5rem 0 4rem;
+
+  @include heading;
+}
+
+.client-focused__text-wrap {
+  width: 90%;
+  display: grid;
+  row-gap: 1rem;
+  grid-column: 2 / 3;
+
+  &--intro {
+    order: -1;
+  }
+}
+
+.client-focused__text {
+  margin: 0;
+}
+
+.client-focused__decor-wrap {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  align-self: end;
+
+  svg:not(:nth-child(1)) {
+    margin: 0 0 0 -0.4rem;
+  }
+}
+
+.client-focused__since {
+  grid-column: -2 / -1;
+  grid-row: 1 / 4;
+  width: 100%;
+  padding: 3.2rem 0 2rem;
+  align-self: end;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #202020;
+}
+
+.client-focused__since-text {
+  margin: 4.4rem 0 0;
+
+  @include add-gradient-text;
+}
