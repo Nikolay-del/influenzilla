@@ -1,10 +1,17 @@
 .promo {
   padding: 14rem 0 5rem;
+
+  @media screen and (max-width: 1200px) {
+    padding-top: 10rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 4.5rem 0 4.1rem;
+  }
 }
 
 .promo__container {
-  display: grid;
-  grid-template-columns: 27% 39% 15% 19%;
+  @include default-grid;
 }
 
 .promo__hi {
@@ -13,6 +20,16 @@
   align-items: center;
   grid-column: 1 / 2;
   gap: 1.6rem;
+
+  @media screen and (max-width: 992px) {
+    grid-column: 1 / -1;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-column: 2 / 3;
+    gap: 0.5rem;
+    justify-self: end;
+  }
 }
 
 .promo__hi-text {
@@ -23,6 +40,10 @@
   margin: 0;
 
   @include heading;
+
+  @media screen and (max-width: 768px) {
+    margin: 0 0 4.25rem;
+  }
 }
 
 .promo__heading-postscript {
@@ -32,6 +53,11 @@
   font-size: 1rem;
   color: $color-basic-white;
   -webkit-text-fill-color: initial;
+
+  @media screen and (max-width: 992px) {
+    font-size: 0.8rem;
+    width: 13rem;
+  }
 }
 
 .promo__text {
@@ -45,6 +71,20 @@
     margin: 0 0 1.25rem;
     display: block;
     animation: rotate 5s linear infinite;
+  }
+
+  @media screen and (max-width: 1200px) {
+    width: auto;
+  }
+
+  @media screen and (max-width: 992px) {
+    grid-column: -3 / -1;
+    margin-left: 1rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 0;
+    width: 64%;
   }
 }
 

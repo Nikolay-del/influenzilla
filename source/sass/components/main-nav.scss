@@ -4,6 +4,10 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 }
 
 .main-nav__item {
@@ -13,13 +17,14 @@
 
   &--language {
     flex: 0 1 4rem;
+    aspect-ratio: 1 / 1;
   }
 }
 
 .main-nav__link {
   display: block;
   text-align: center;
-  padding: 1.5rem 4rem;
+  padding: 1.55rem 4rem;
   text-transform: uppercase;
   color: $color-basic-white;
   text-decoration: none;
@@ -31,6 +36,14 @@
   @include hover {
     background: $color-basic-white;
     color: $color-background;
+  }
+
+  @media screen and (max-width: 1320px) {
+    padding: 1.55rem 3rem;
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding: 1.55rem 6rem;
   }
 }
 
@@ -61,4 +74,17 @@
 
 .main-nav__button-open {
   display: none;
+  padding: 0 2.4rem;
+  height: 100%;
+  text-transform: uppercase;
+  color: $color-basic-white;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: none;
+  border: 0;
+  border-left: 2px solid $color-basic-white;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+  }
 }

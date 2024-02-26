@@ -1,7 +1,17 @@
+.services {
+  padding: 8rem 0 10rem;
+
+  @media screen and (max-width: 1200px) {
+    padding: 6rem 0 8rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 4.8rem 0 5.4rem;
+  }
+}
+
 .services__container {
-  display: grid;
-  grid-template-columns: 27% 39% 15% 19%;
-  margin: 0 0 300px;
+  @include default-grid;
 
   &::before {
     content: "London 2006";
@@ -10,6 +20,12 @@
     font-size: 0.75rem;
 
     @include add-gradient-text;
+
+    @media screen and (max-width: 768px) {
+      grid-row: auto;
+      order: 1;
+      margin: 0 0 1.6rem;
+    }
   }
 }
 
@@ -18,6 +34,15 @@
   width: 95%;
 
   @include heading;
+
+  @media screen and (max-width: 768px) {
+    order: 2;
+    width: 90%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: auto;
+  }
 }
 
 .services__text {
@@ -27,21 +52,59 @@
     margin: 2rem 0 0;
     width: 90%;
     grid-column: 2 / 3;
+
+    @media screen and (max-width: 1200px) {
+      grid-column: 2 / 4;
+    }
+
+    @media screen and (max-width: 992px) {
+      grid-column: 2 / 5;
+    }
+
+    @media screen and (max-width: 768px) {
+      grid-column: 1 / -1;
+      order: 3;
+      margin: 0 0 1.8rem;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: auto;
   }
 }
 
 .services__text-wrap {
   display: grid;
   align-content: start;
-  row-gap: 1rem;
+  gap: 1rem 2rem;
 
   &--company-description {
     width: 78%;
     grid-column: 2 / 3;
+
+    @media screen and (max-width: 1200px) {
+      width: auto;
+      grid-template-columns: 1fr 1fr;
+      grid-column: 2 / -1;
+    }
+
+    @media screen and (max-width: 768px) {
+      order: 6;
+      grid-column: 1 / -1;
+      grid-template-columns: 1fr;
+    }
   }
 
   &--about-services {
     grid-column: 3 / -1;
+
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
   }
 }
 
@@ -53,6 +116,20 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   box-shadow: 0 0 0 2px $color-basic-white inset;
+
+  @media screen and (max-width: 992px) {
+    grid-column: 1 / -1;
+  }
+
+  @media screen and (max-width: 768px) {
+    order: 4;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 0 4rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 }
 
 .services__item {
@@ -61,7 +138,7 @@
 
 .services__item-top {
   display: flex;
-  padding: 2.7rem 0 3.25rem 3.25rem;
+  padding: 2.7rem 0 3.25rem 3rem;
   box-shadow: 0 -2px 0 0 $color-basic-white inset;
 
   picture {
@@ -77,6 +154,18 @@
       transform: rotate(120deg);
     }
   }
+
+  @media screen and (max-width: 1200px) {
+    padding-left: 1.5rem;
+  }
+
+  @media screen and (max-width: 992px) {
+    padding: 2rem 0 2rem 1.5rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 1.75rem 4.35rem;
+  }
 }
 
 .services__item-name {
@@ -91,14 +180,42 @@
 .services__item-description {
   margin: 0;
   width: 73%;
+
+  @media screen and (max-width: 1200px) {
+    width: auto;
+  }
 }
 
 .services__item-bottom {
   padding: 2.1rem 0 3rem 3rem;
+
+  @media screen and (max-width: 1200px) {
+    padding: 2rem 1rem 3rem 1.5rem;
+  }
+
+  @media screen and (max-width: 992px) {
+    padding-bottom: 2rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 2rem 4.35rem;
+  }
 }
 
 .services__figure {
   grid-column: 1 / 2;
   grid-row: 3 / 4;
   align-self: end;
+
+  @media screen and (max-width: 992px) {
+    margin: 2rem 0 0;
+    grid-row: 4 / 5;
+    align-self: start;
+  }
+
+  @media screen and (max-width: 768px) {
+    order: 5;
+    grid-row: auto;
+    margin: 0 0 1.6rem;
+  }
 }

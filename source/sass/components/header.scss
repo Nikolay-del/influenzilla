@@ -16,6 +16,14 @@
   outline: 2px solid $color-basic-white;
   display: grid;
   grid-template-columns: max-content 1fr;
+
+  @media screen and (max-width: 1200px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr min-content;
+  }
 }
 
 .header__about {
@@ -24,10 +32,27 @@
   gap: 3.6rem;
   padding: 0 3.4rem 0 2rem;
   box-shadow: -2px 0 0 0 $color-basic-white inset;
+
+  @media screen and (max-width: 1200px) {
+    padding: 1.5rem 3rem;
+    justify-content: center;
+    box-shadow: 0 -2px 0 0 $color-basic-white inset;
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0.75rem;
+    box-shadow: none;
+  }
 }
 
 .header__logo {
   flex: 0 0 auto;
+}
+
+.header__description {
+  @media screen and (max-width: 520px) {
+    display: none;
+  }
 }
 
 @keyframes zoom {
